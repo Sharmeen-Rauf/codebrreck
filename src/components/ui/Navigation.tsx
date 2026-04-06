@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { name: "Home", href: "/" },
@@ -49,15 +52,68 @@ export default function Navigation() {
           })}
         </div>
         
-        {/* Right: Button */}
-        <Link 
-          href="/contact" 
-          className="group px-6 py-2.5 rounded-full border border-white/20 bg-transparent hover:border-electric text-white transition-all text-sm font-bold flex items-center gap-2 hover:shadow-[0_0_20px_rgba(0,240,255,0.2)]"
-        >
-          Book a call
-          <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
-        </Link>
+        {/* Right: Button & Mobile Toggle */}
+        <div className="flex items-center gap-4">
+          <Link 
+            href="/contact" 
+            className="hidden md:flex group px-6 py-2.5 rounded-full border border-white/20 bg-transparent hover:border-electric text-white transition-all text-sm font-bold items-center gap-2 hover:shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+          >
+            Book a call
+            <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
+          </Link>
+
+          {/* Hamburger Menu (Mobile Only) */}
+          <button 
+            className="md:hidden p-2 text-white/80 hover:text-electric transition-colors"
+            onClick={() => setIsOpen(true)}
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-3xl flex flex-col items-center justify-center"
+          >
+            <button 
+              className="absolute top-6 right-6 p-2 text-white/50 hover:text-electric transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            <div className="flex flex-col items-center gap-8 text-2xl font-black tracking-tight">
+              {links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link 
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`transition-colors ${isActive ? 'text-electric' : 'text-white hover:text-electric'}`}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              })}
+
+              <Link 
+                href="/contact" 
+                onClick={() => setIsOpen(false)}
+                className="mt-8 px-10 py-4 rounded-full bg-electric text-black transition-all text-lg font-bold shadow-[0_0_30px_rgba(0,240,255,0.4)]"
+              >
+                Book a call
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

@@ -31,18 +31,19 @@ export default function FooterSection() {
       </div>
 
       {/* Grid Links Bar */}
-      <div className="w-full max-w-[1400px] border-y border-white/10 flex flex-wrap md:flex-nowrap divide-x divide-white/10 md:h-20 bg-black">
+      <div className="w-full max-w-[1400px] border-y border-white/10 grid grid-cols-2 md:flex divide-y md:divide-y-0 md:divide-x divide-white/10 bg-black">
         {footerLinks.map((link, idx) => (
           <Link 
             key={idx} 
             href={link.href}
-            className={`flex-1 min-w-[20%] md:min-w-0 h-16 md:h-auto flex items-center justify-center hover:bg-white/5 transition-colors
-              ${link.name ? 'px-6' : 'px-4'}
+            className={`flex-1 flex items-center justify-center hover:bg-white/5 transition-colors py-4 md:py-6 text-center
+              ${link.name ? 'px-2 md:px-6' : 'px-4'}
               ${link.highlight ? 'font-bold' : 'font-medium text-white/50'}
               ${link.color ? link.color : 'text-white/80'}
             `}
           >
-            {link.icon || link.name}
+            {link.icon && <span className="flex items-center justify-center">{link.icon}</span>}
+            {link.name && <span className="text-xs md:text-sm">{link.name}</span>}
           </Link>
         ))}
       </div>
