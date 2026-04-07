@@ -1530,6 +1530,9 @@ video {
 .pt-32 {
   padding-top: 8rem;
 }
+.pb-12 {
+  padding-bottom: 3rem;
+}
 .text-left {
   text-align: left;
 }
@@ -2491,6 +2494,10 @@ body {
 
   .lg\:pl-10 {
     padding-left: 2.5rem;
+  }
+
+  .lg\:pt-28 {
+    padding-top: 7rem;
   }
 
   .lg\:text-6xl {

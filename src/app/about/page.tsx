@@ -7,8 +7,8 @@ import FooterSection from "@/components/ui/FooterSection";
 
 export default function AboutPage() {
   return (
-    <main className="relative w-full">
-      <div className="w-full relative z-10 pt-10">
+    <main className="relative w-full bg-[#050505] min-h-screen">
+      <div className="w-full relative z-10">
         
         <AboutIntroSection />
         

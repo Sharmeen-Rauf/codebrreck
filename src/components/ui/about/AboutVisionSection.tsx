@@ -44,8 +44,8 @@ export default function AboutVisionSection() {
           className="flex flex-col gap-8 order-1 lg:order-2"
         >
           <div className="flex flex-col gap-2">
-            <h3 className="text-electric font-black text-2xl md:text-3xl tracking-tight">Our Vision</h3>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+            <h3 className="text-electric font-black text-xl md:text-2xl tracking-tight">Our Vision</h3>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white leading-[1.1]">
               Why choose <br/> Code Breck Lab
             </h2>
           </div>

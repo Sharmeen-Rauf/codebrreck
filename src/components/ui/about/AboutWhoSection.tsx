@@ -15,8 +15,8 @@ export default function AboutWhoSection() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-2"
         >
-          <h3 className="text-electric font-black text-2xl md:text-3xl tracking-tight">About us</h3>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+          <h3 className="text-electric font-black text-xl md:text-2xl tracking-tight">About us</h3>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight">
             Who we are
           </h2>
         </motion.div>

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function AboutIntroSection() {
   return (
-    <section className="w-full pt-32 md:pt-48 pb-20 px-4 md:px-12 lg:px-24 z-20 relative flex justify-center bg-transparent">
+    <section className="w-full pt-20 lg:pt-28 pb-12 px-4 md:px-12 lg:px-24 z-20 relative flex justify-center bg-transparent">
       <div className="w-full max-w-[1400px] grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
         {/* Left: Text */}
@@ -16,9 +16,9 @@ export default function AboutIntroSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 mt-10 md:mt-0"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.1]">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1]">
             <span className="text-electric">About Us -</span> <br className="hidden md:block"/>
             Code Breck <span className="text-white/60">Lab</span>
           </h1>
