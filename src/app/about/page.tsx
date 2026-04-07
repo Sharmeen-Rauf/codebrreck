@@ -2,6 +2,8 @@ import AboutIntroSection from "@/components/ui/about/AboutIntroSection";
 import AboutWhoSection from "@/components/ui/about/AboutWhoSection";
 import AboutMissionSection from "@/components/ui/about/AboutMissionSection";
 import LetsTalkSection from "@/components/ui/about/LetsTalkSection";
+import ExperienceSection from "@/components/ui/about/ExperienceSection";
+import ValuesSection from "@/components/ui/about/ValuesSection";
 import AboutVisionSection from "@/components/ui/about/AboutVisionSection";
 import FooterSection from "@/components/ui/FooterSection";
 
@@ -19,6 +21,10 @@ export default function AboutPage() {
         <LetsTalkSection />
 
         <AboutVisionSection />
+
+        <ExperienceSection />
+
+        <ValuesSection />
 
         <FooterSection />
 
