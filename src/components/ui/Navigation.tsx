@@ -4,11 +4,26 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
 export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() || 0;
+    if (pathname !== "/") {
+      if (latest > previous && latest > 150) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+    } else {
+      setIsHidden(false);
+    }
+  });
 
   const links = [
     { name: "Home", href: "/" },
@@ -21,7 +36,15 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full p-4 md:p-6 flex justify-between items-center z-50">
+    <motion.nav 
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" }
+      }}
+      animate={isHidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="fixed top-0 left-0 w-full p-4 md:p-6 flex justify-between items-center z-50 bg-black/50 backdrop-blur-md border-b border-white/5 md:border-none md:bg-transparent md:backdrop-blur-none"
+    >
       <div className="w-full max-w-[1400px] mx-auto flex justify-between items-center px-4">
         
         {/* Left: Logo */}
@@ -114,6 +137,6 @@ export default function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 }
