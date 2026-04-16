@@ -264,8 +264,8 @@ export default function PackagesPage() {
     <main className="relative w-full min-h-screen pt-32 flex flex-col bg-black overflow-hidden justify-between">
       {/* Immersive glow background */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
-        <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-[#ff3333]/15 blur-[180px] rounded-full" />
-        <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-[#ff1111]/10 blur-[200px] rounded-full" />
+        <div className="absolute top-1/4 -left-1/4 w-[500px] h-[500px] bg-electric/15 blur-[180px] rounded-full" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-electric/10 blur-[200px] rounded-full" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 mb-20">
@@ -276,7 +276,7 @@ export default function PackagesPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-[#ff3333] text-xl font-bold mb-4 tracking-wide">Pricing</h2>
+          <h2 className="text-electric text-xl font-bold mb-4 tracking-wide">Pricing</h2>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
             The Perfect plans for Your Needs
           </h1>
@@ -290,8 +290,8 @@ export default function PackagesPage() {
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-2.5 rounded-[20px] text-sm md:text-base transition-all duration-300 font-medium whitespace-nowrap ${
                 activeCategory === category
-                  ? "border border-[#ff3333] text-white bg-[#ff3333]/10 shadow-[0_0_20px_rgba(255,51,51,0.2)]"
-                  : "border border-white/20 text-white/70 hover:border-[#ff3333]/50 hover:text-white"
+                  ? "border border-electric text-white bg-electric/10 shadow-[0_0_20px_rgba(0,240,255,0.2)]"
+                  : "border border-white/20 text-white/70 hover:border-electric/50 hover:text-white"
               }`}
             >
               {category}
@@ -309,23 +309,23 @@ export default function PackagesPage() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: -20 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="relative bg-[#110505]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 flex flex-col group hover:border-[#ff3333]/30 transition-all duration-500 overflow-hidden shadow-2xl"
+                className="relative bg-[#030d0d]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 flex flex-col group hover:border-electric/30 transition-all duration-500 overflow-hidden shadow-2xl"
               >
                 {/* Accent line on top */}
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#ff3333]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-electric/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Subtle card glow */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#ff3333]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-b from-electric/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
-                <h3 className="text-[#ff3333] text-lg font-semibold mb-6">{plan.name}</h3>
+                <h3 className="text-electric text-lg font-semibold mb-6">{plan.name}</h3>
                 
                 <div className="flex items-baseline gap-3 mb-4">
                   <span className="text-5xl font-black text-white">{plan.price}</span>
-                  <span className="text-xl text-[#ff3333] line-through decoration-[#ff3333]/40 font-medium">{plan.oldPrice}</span>
+                  <span className="text-xl text-electric line-through decoration-electric/40 font-medium">{plan.oldPrice}</span>
                 </div>
                 
                 <div className="text-[#00ff88] text-[15px] font-medium mb-8">
-                  Up to <span className="text-[#ff3333] font-bold">50%</span> referral AAR
+                  Up to <span className="text-electric font-bold">50%</span> referral AAR
                 </div>
 
                 <div className="text-white font-bold text-lg mb-6 tracking-wide">Includes:</div>
@@ -334,7 +334,7 @@ export default function PackagesPage() {
                 <div className="flex-grow space-y-4 mb-8 overflow-y-auto pr-2 flex flex-col min-h-[220px]" 
                      style={{
                        scrollbarWidth: 'thin',
-                       scrollbarColor: '#ff3333 transparent'
+                       scrollbarColor: '#00f0ff transparent'
                      }}>
                   {plan.features.map((feature: string, idx: number) => (
                     <div key={idx} className="flex gap-4 text-white/80 text-[15px] items-start">
@@ -347,12 +347,12 @@ export default function PackagesPage() {
                 </div>
 
                 <button className="w-full relative overflow-hidden group/btn rounded-2xl p-[1px] bg-gradient-to-b from-white/10 to-transparent transition-transform hover:scale-[1.02] active:scale-[0.98]">
-                  <div className="w-full bg-[#110505] group-hover/btn:bg-[#2a0808] transition-colors duration-300 py-4 rounded-2xl flex items-center justify-center gap-2">
+                  <div className="w-full bg-[#030d0d] group-hover/btn:bg-[#082222] transition-colors duration-300 py-4 rounded-2xl flex items-center justify-center gap-2">
                     <span className="text-white text-[15px] font-bold tracking-wide">Buy Now</span>
                     <ArrowUpRight className="w-4 h-4 text-white font-bold" />
                   </div>
-                  {/* Bottom red gradient overlay mimicking screenshot */}
-                  <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#ff3333]/20 to-transparent pointer-events-none" />
+                  {/* Bottom electric gradient overlay mimicking screenshot */}
+                  <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-electric/20 to-transparent pointer-events-none" />
                 </button>
                 
               </motion.div>
