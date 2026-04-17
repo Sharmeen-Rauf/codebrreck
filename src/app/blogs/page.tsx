@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import FooterSection from "@/components/ui/FooterSection";
+import LogoSlider from "@/components/ui/LogoSlider";
+import BlogGrid from "@/components/ui/BlogGrid";
 
 export default function BlogsPage() {
   return (
@@ -49,6 +51,10 @@ export default function BlogsPage() {
         </div>
 
       </div>
+
+      <LogoSlider />
+      
+      <BlogGrid />
 
       <FooterSection />
     </main>
