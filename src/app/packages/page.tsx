@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ArrowUpRight } from "lucide-react";
 import FooterSection from "@/components/ui/FooterSection";
