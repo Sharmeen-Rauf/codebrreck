@@ -47,7 +47,7 @@ export default function PortfolioPage() {
   const marqueeDuplicated = Array(15).fill("OUR WORK");
 
   return (
-    <main className="relative w-full min-h-screen bg-black flex flex-col pt-32 lg:pt-40 overflow-hidden">
+    <main className="relative w-full min-h-screen bg-black flex flex-col pt-44 lg:pt-56 overflow-hidden">
       
       {/* Background glow specific to portfolio page */}
       <div className="absolute top-[-10%] left-[-10%] w-[50vh] h-[50vh] bg-electric/10 blur-[150px] rounded-full pointer-events-none z-0" />
@@ -63,7 +63,7 @@ export default function PortfolioPage() {
           transition={{ duration: 0.8 }}
           className="w-full lg:w-1/2 flex flex-col gap-6 items-start z-10"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-black tracking-tighter leading-[1.05] text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-widest leading-[1.1] text-white">
             Our Results-<br/>
             Driven <br/>
             Project Showcase

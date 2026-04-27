@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BlogSection() {
   const blogs = [
@@ -10,19 +11,19 @@ export default function BlogSection() {
       category: "Design",
       title: "UI / UX Designing is the process of creating interfaces",
       desc: "UI / UX Designing is the process of creating interfaces that are both visually appealing and user-friendly.",
-      color: "from-purple-500/20 to-purple-500/5",
+      image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=600&auto=format&fit=crop",
     },
     {
       category: "Development",
       title: "Web Development and the work involved",
       desc: "Web Development is the work involved in developing a website for the Internet (World Wide Web) or an intranet.",
-      color: "from-blue-500/20 to-blue-500/5",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop",
     },
     {
       category: "AI & Innovation",
       title: "AI and its impact on the world",
       desc: "AI refers to the simulation of human intelligence in machines that are programmed to think and learn.",
-      color: "from-emerald-500/20 to-emerald-500/5",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop",
     }
   ];
 
@@ -57,14 +58,15 @@ export default function BlogSection() {
               className="flex flex-col gap-6 group cursor-pointer"
             >
               {/* Image Placeholder */}
-              <div className={`w-full aspect-[4/3] rounded-3xl bg-gradient-to-br ${blog.color} border border-white/5 flex items-center justify-center overflow-hidden relative group-hover:border-white/20 transition-all shadow-lg`}>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
-                <div className="w-full h-full bg-black/40 backdrop-blur-sm group-hover:bg-transparent transition-all duration-500"></div>
-                {/* Simulated content via generic geometry */}
-                <div className="absolute flex flex-wrap gap-2 opacity-30 group-hover:opacity-60 transition-opacity">
-                  {[...Array(6)].map((_,i) => <div key={i} className="w-12 h-12 border border-white/50 rounded-lg"></div>)}
-                </div>
-              </div>
+              <Link href="/blogs" className="w-full aspect-[4/3] rounded-3xl bg-black border border-white/5 flex items-center justify-center overflow-hidden relative group-hover:border-electric transition-all shadow-lg">
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500 z-10" />
+                <Image 
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                />
+              </Link>
 
               {/* Content */}
               <div className="flex flex-col gap-3 px-2">

@@ -20,7 +20,7 @@ export default function AboutIntroSection() {
         >
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[1.1]">
             <span className="text-electric">About Us -</span> <br className="hidden md:block"/>
-            Code Breck <span className="text-white/60">Lab</span>
+            Code Breck 
           </h1>
           
           <div className="flex flex-col gap-6 mt-4 text-white/70 text-lg font-light leading-relaxed">
@@ -44,7 +44,7 @@ export default function AboutIntroSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,240,255,0.1)] group"
+          className="relative w-full h-[400px] md:h-[500px] lg:h-[650px] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,240,255,0.1)] group"
         >
           <Image 
             src="/images/about_intro.png" 
