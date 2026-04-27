@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { servicesData } from "@/lib/servicesData";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -37,6 +38,62 @@ export default function Navigation() {
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide text-white bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-8 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
           {links.map((link) => {
             const isActive = pathname === link.href;
+            
+            // Render Mega Menu wrapper specifically for Services
+            if (link.name === "Services") {
+              return (
+                <div key={link.name} className="group relative">
+                  <Link 
+                    href={link.href} 
+                    className={`relative flex flex-col items-center hover:text-electric transition-colors py-4 ${isActive ? 'text-electric' : 'text-white/80'}`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className="absolute bottom-3 left-0 w-full h-[2px] bg-electric rounded-full shadow-[0_0_10px_rgba(0,240,255,0.8)]"></span>
+                    )}
+                  </Link>
+                  
+                  {/* Mega Menu Dropdown */}
+                  <div className="absolute top-[100%] left-1/2 -translate-x-1/2 mt-2 w-[90vw] max-w-[1200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out z-[100]">
+                    <div className="w-full bg-[#0a0a0a]/95 backdrop-blur-3xl border border-white/10 rounded-3xl p-8 shadow-[0_30px_100px_rgba(0,0,0,0.9)] max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-electric scrollbar-track-transparent custom-scroll">
+                      
+                      <style dangerouslySetInnerHTML={{__html: `
+                        .custom-scroll::-webkit-scrollbar {
+                          width: 4px;
+                        }
+                        .custom-scroll::-webkit-scrollbar-track {
+                          background: transparent;
+                        }
+                        .custom-scroll::-webkit-scrollbar-thumb {
+                          background-color: #00f0ff;
+                          border-radius: 20px;
+                        }
+                      `}} />
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+                        {servicesData.map((category) => (
+                          <div key={category.slug} className="flex flex-col">
+                            <Link href={`/services/${category.slug}`} className="text-white font-bold text-lg mb-4 hover:text-electric transition-colors block border-b border-white/10 pb-2">
+                              {category.title}
+                            </Link>
+                            <ul className="flex flex-col gap-3">
+                              {category.items.map((subItem, idx) => (
+                                <li key={idx} className="flex items-start text-white/60 hover:text-white transition-colors group/item">
+                                  <ChevronRight className="w-4 h-4 mr-2 shrink-0 group-hover/item:text-electric transition-colors" />
+                                  <span className="text-sm font-medium leading-relaxed">{subItem}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            // Normal Link Render
             return (
               <Link 
                 key={link.name}
