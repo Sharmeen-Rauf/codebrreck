@@ -39,19 +39,19 @@ export default function ContactSection() {
               <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center shrink-0 group-hover:border-electric transition-colors bg-white/5 text-electric">
                 <Phone className="w-4 h-4" />
               </div>
-              <span className="text-sm tracking-widest">+1 (800) 123-4567</span>
+              <span className="text-sm tracking-widest">+1 409-228-0923</span>
             </div>
             <div className="flex items-center gap-4 text-white/80 group">
               <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center shrink-0 group-hover:border-electric transition-colors bg-white/5 text-electric">
                 <Mail className="w-4 h-4" />
               </div>
-              <span className="text-sm tracking-widest">hello@codebreck.com</span>
+              <span className="text-sm tracking-widest">hello@bembexlab.com</span>
             </div>
             <div className="flex items-center gap-4 text-white/80 group">
               <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center shrink-0 group-hover:border-electric transition-colors bg-white/5 text-electric">
                 <MapPin className="w-4 h-4" />
               </div>
-              <span className="text-sm tracking-widest leading-relaxed">Code Breck Lab, San Francisco, CA</span>
+              <span className="text-sm tracking-widest leading-relaxed">2300 Lakeview Pkwy, Alpharetta, GA 30009</span>
             </div>
           </div>
         </motion.div>
