@@ -6,7 +6,7 @@ import BlogGrid from "@/components/ui/BlogGrid";
 
 export default function BlogsPage() {
   return (
-    <main className="relative w-full min-h-screen bg-black flex flex-col pt-32 lg:pt-40">
+    <main className="relative w-full min-h-screen bg-black flex flex-col pt-24 lg:pt-32">
       
       {/* Background glow specific to blogs page */}
       <div className="absolute top-[-20%] left-[-10%] w-[50vh] h-[50vh] bg-electric/20 blur-[150px] rounded-full pointer-events-none" />
@@ -20,18 +20,18 @@ export default function BlogsPage() {
           
           {/* Left Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col gap-6 items-start lg:pr-8">
-            <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-black tracking-tight leading-[1.05] text-white">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.05] text-white">
               <span className="text-electric">Inspiring Ideas</span>, Expert Insights, and <span className="text-[#c78b7a]">the Latest</span> Trends
             </h1>
             
-            <p className="text-white/70 text-lg md:text-xl font-medium tracking-wide mt-4 mb-4 lg:pr-4">
+            <p className="text-white/70 text-base md:text-lg font-medium tracking-wide mt-2 mb-2 lg:pr-4">
               Dive into our blog for actionable strategies, expert insights, and fresh perspectives that will help you stay ahead of the curve. Whether you're looking for ways to boost performance or optimize your digital presence.
             </p>
             
-            <button className="flex items-center gap-3 bg-electric/10 text-electric border border-electric/30 hover:bg-electric hover:text-black transition-all duration-300 font-bold px-8 py-3.5 rounded-full group">
+            <Link href="/blogs#grid" className="flex items-center gap-3 bg-electric/10 text-electric border border-electric/30 hover:bg-electric hover:text-black transition-all duration-300 font-bold px-8 py-3.5 rounded-full group">
               Explore Articles
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
 
           {/* Right Image Content */}

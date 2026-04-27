@@ -346,14 +346,14 @@ export default function PackagesPage() {
                   ))}
                 </div>
 
-                <button className="w-full relative overflow-hidden group/btn rounded-2xl p-[1px] bg-gradient-to-b from-white/10 to-transparent transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                <Link href="/contact" className="w-full relative overflow-hidden group/btn rounded-2xl p-[1px] bg-gradient-to-b from-white/10 to-transparent transition-transform hover:scale-[1.02] active:scale-[0.98] block">
                   <div className="w-full bg-[#030d0d] group-hover/btn:bg-[#082222] transition-colors duration-300 py-4 rounded-2xl flex items-center justify-center gap-2">
                     <span className="text-white text-[15px] font-bold tracking-wide">Buy Now</span>
                     <ArrowUpRight className="w-4 h-4 text-white font-bold" />
                   </div>
                   {/* Bottom electric gradient overlay mimicking screenshot */}
                   <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-electric/20 to-transparent pointer-events-none" />
-                </button>
+                </Link>
                 
               </motion.div>
             ))}

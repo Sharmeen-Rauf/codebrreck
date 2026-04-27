@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, ArrowDown } from "lucide-react";
 
@@ -88,10 +89,10 @@ export default function FAQSection() {
 
         {/* Load More Button matching screenshot */}
         <div className="w-full flex justify-center mt-6">
-          <button className="px-8 py-3 rounded-full border border-electric/30 bg-electric/10 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-electric hover:text-black transition-all group">
+          <Link href="/contact" className="px-8 py-3 rounded-full border border-electric/30 bg-electric/10 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-electric hover:text-black transition-all group">
             Load More
             <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-          </button>
+          </Link>
         </div>
 
       </div>

@@ -22,7 +22,7 @@ export const dummyBlogs = [
   },
   {
     slug: "ai-impact-on-world",
-    category: "Development",
+    category: "AI & Innovation",
     title: "AI and its impact on the world",
     desc: "AI (Artificial Intelligence) refers to the simulation of human intelligence in machines that are programmed to think and learn.",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
@@ -33,6 +33,34 @@ export const dummyBlogs = [
     title: "CMS and its importance",
     desc: "CMS (Content Management System) is a software application that allows users to create, manage, and modify content on a website without the need for specialized technical knowledge.",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    slug: "seo-strategies-that-work",
+    category: "Marketing",
+    title: "SEO Strategies That Actually Drive Traffic in 2025",
+    desc: "Search engine optimization has evolved significantly. Here are data-backed strategies that still move the needle for competitive industries.",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    slug: "ecommerce-conversion-tips",
+    category: "E-Commerce",
+    title: "10 E-Commerce Tactics to Boost Your Conversion Rate",
+    desc: "From checkout UX to personalization engines, these proven tactics help online stores convert more visitors into buyers.",
+    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    slug: "cloud-architecture-basics",
+    category: "Cloud & Infrastructure",
+    title: "Cloud Architecture Basics Every Developer Should Know",
+    desc: "Understanding microservices, serverless functions, and container orchestration is fundamental for modern application deployment.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    slug: "branding-tips-for-startups",
+    category: "Branding",
+    title: "Branding Tips for Startups: From Zero to Recognition",
+    desc: "Building a recognizable brand is much more than picking a logo. Discover the strategy behind brand identity that scales.",
+    image: "https://images.unsplash.com/photo-1493421419110-74f4e85ba126?q=80&w=600&auto=format&fit=crop"
   }
 ];
 
