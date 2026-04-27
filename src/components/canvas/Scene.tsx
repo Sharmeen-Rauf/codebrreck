@@ -15,7 +15,7 @@ export default function Scene() {
 
   return (
     <div className="absolute top-0 left-0 w-full h-screen z-0 pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 5], fov: 45 }} dpr={[1, 2]}>
+      <Canvas camera={{ position: [0, 0, 10], fov: 50 }} dpr={[1, 2]}>
         <color attach="background" args={['#000000']} />
         
         <ambientLight intensity={0.2} />
