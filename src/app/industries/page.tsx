@@ -27,9 +27,9 @@ export default function IndustriesPage() {
         transition={{ duration: 0.6 }}
         className="max-w-4xl pt-12 pb-20"
       >
-        <span className="text-electric font-semibold tracking-widest uppercase text-sm mb-4 block">Industries We Serve</span>
-        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
-          IMPACT ACROSS <br/> DOMAINS.
+        <span className="text-electric font-semibold tracking-widest uppercase text-sm mb-4 block">Industries</span>
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">
+          GLOBAL <br/> <span className="text-glow">REACH.</span>
         </h1>
         <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl">
           Leveraging deep domain expertise to pioneer digital transformation for world-class brands across diverse sectors.

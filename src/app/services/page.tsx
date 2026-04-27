@@ -30,7 +30,7 @@ export default function ServicesPage() {
         className="max-w-4xl pt-12 pb-20"
       >
         <span className="text-electric font-semibold tracking-widest uppercase text-sm mb-4 block">Our Solutions</span>
-        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-none">
           ENGINEERED FOR <br/> <span className="text-glow">SCALE.</span>
         </h1>
         <p className="text-xl md:text-2xl text-white/60 font-light max-w-2xl">

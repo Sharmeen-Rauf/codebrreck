@@ -63,7 +63,7 @@ export default function PortfolioPage() {
           transition={{ duration: 0.8 }}
           className="w-full lg:w-1/2 flex flex-col gap-6 items-start z-10"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-black tracking-tighter leading-[1.05] text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-black tracking-tighter leading-[1.05] text-white">
             Our Results-<br/>
             Driven <br/>
             Project Showcase

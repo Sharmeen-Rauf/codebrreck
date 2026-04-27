@@ -56,8 +56,8 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="max-w-4xl"
           >
-            <h1 className="text-4xl md:text-7xl font-black tracking-tighter mb-6 text-glow">
-              BUILD BEYOND <br /> LIMITS.
+            <h1 className="text-3xl md:text-6xl font-black tracking-tighter mb-6 text-glow">
+              NEXT GEN <br /> AGENCIES.
             </h1>
             <p className="text-lg md:text-2xl text-white/60 mb-10 max-w-2xl mx-auto font-light">
               Engineering the future. A global software house delivering cutting-edge AI, scalable cloud infrastructure, and enterprise platforms.
